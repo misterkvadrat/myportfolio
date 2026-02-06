@@ -4,14 +4,20 @@ Welcome to my portfolio. Here I will show to you my projects, my bio, where I wa
 ----
 
 * My bio: Maxim, male, 17 years.
-* Me about me: very adaptive, enthusiastic, fast-learning, totally not AI, playful and real joker. Really good at analyzing things. And people too.
+* Me about me: very adaptive, enthusiastic, fast-learning, totally not AI, playful and blatant joker. Really good at analyzing things. And people too.
 
 ----
+* Where did I studied: (nothing to say)
 
-Where I am studying: Digital School (Top-43 in Moscow in 2024, top made by RAEX). Planning to: MPEI/MiSiS/MIREA, hopefully Central University/HSE/University of Innopolis.
+* Where I am studying at right now: Digital School (Top-43 in Moscow in 2024, top made by RAEX).
 
-Courses:
+* Where I am planning to study:  MPEI/MiSiS/MIREA, hopefully Central University/HSE/University of Innopolis.
 
+* Courses that I've done:
+
+* Courses that I'm doing:
+
+* Courses that I'm planning to do:
 ----
 
 Where am I currently working at:
@@ -22,4 +28,4 @@ My projects (divided my themes):
 
 
 
-# Is going to be updated
+# Is going to be updated. Hardly.
