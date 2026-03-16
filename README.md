@@ -15,7 +15,7 @@
 <!-- ССЫЛКИ НА РЕПОЗИТОРИИ -->
 
 ### 📫 Contact
-[Telegram](https://t.me/whothefckisthatguy | [Email](mailto:maxmanpin@gmail.com)
+[Telegram](https://t.me/whothefckisthatguy) | [Email](mailto:maxmanpin@gmail.com)
 
 My projects (divided my themes):
 Emai
