@@ -1,33 +1,23 @@
 # The Portfolio
-Welcome to my portfolio. Here I will show to you my projects, my bio, where I want to work, where I am studying/studied and how long. I hope you like it.
+# Hi, I'm Maxim 👋
+## 17 y.o. | Python learner | Case-championship semifinalist
 
-----
+### 🎓 Currently studying
+- Python Programming (MOOC.fi)
+- Building AI (MOOC.fi)
+- Digital School (School by MSPU), Moscow
 
-* My bio: Maxim, male, 17 years.
-* Me about me: very adaptive, enthusiastic, fast-learning, totally not AI, playful and blatant joker. Really good at analyzing things. And people too.
+### 🏆 Achievements
+- **DEADLINE** (CU): Semifinalist
+- **PROD** (CU): Semifinalist, iOS Mobile Stack
 
-----
-* Where did I studied: (nothing to say)
+### 💻 Projects
+<!-- ССЫЛКИ НА РЕПОЗИТОРИИ -->
 
-* Where I am studying at right now: Digital School (Top-43 in Moscow in 2024, top made by RAEX).
-
-* Where I am planning to study:  MPEI/MiSiS/MIREA, hopefully Central University/HSE/University of Innopolis.
-
-* Courses that I've done:
-
-* Courses that I'm doing: Python Programming and Building AI, both by MOOC.fi
-
-* Courses that I'm planning to do:
-
-* Some things: semifinalist in DEADLINE (business case-championship by CU), semi-finalist in PROD (coding case-championship by CU), 
-----
-
-Where am I currently working at:
-
-----
+### 📫 Contact
+[Telegram](https://t.me/whothefckisthatguy | [Email](mailto:maxmanpin@gmail.com)
 
 My projects (divided my themes):
-
-
+Emai
 
 # Is going to be updated. Hardly.
