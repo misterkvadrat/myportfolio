@@ -15,9 +15,11 @@ Welcome to my portfolio. Here I will show to you my projects, my bio, where I wa
 
 * Courses that I've done:
 
-* Courses that I'm doing:
+* Courses that I'm doing: Python Programming and Building AI, both by MOOC.fi
 
 * Courses that I'm planning to do:
+
+* Some things: semifinalist in DEADLINE (business case-championship by CU), semi-finalist in PROD (coding case-championship by CU), 
 ----
 
 Where am I currently working at:
