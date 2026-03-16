@@ -1,6 +1,6 @@
 # The Portfolio
 # Hi, I'm Maxim 👋
-## 17 y.o. | Python learner | Case-championship semifinalist
+## 17 y.o. | Python/Rust learner | Case-championship semifinalist
 
 ### 🎓 Currently studying
 - Python Programming (MOOC.fi)
