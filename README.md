@@ -17,7 +17,4 @@
 ### 📫 Contact
 [Telegram](https://t.me/whothefckisthatguy) | [Email](mailto:maxmanpin@gmail.com)
 
-My projects (divided my themes):
-Emai
-
 # Is going to be updated. Hardly.
