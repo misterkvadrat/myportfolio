@@ -13,7 +13,8 @@
 
 ### 💻 Projects
 <!-- ССЫЛКИ НА РЕПОЗИТОРИИ -->
-https://github.com/misterkvadrat/passhere (first pet project)
+- [PassHere](https://github.com/misterkvadrat/passhere) (first pet-project)
+- [Github-monitor](https://github.com/misterkvadrat/github-monitor) (First bilingual pet-project)
 ### 📫 Contact
 [Telegram](https://t.me/whothefckisthatguy) | [Email](mailto:maxmanpin@gmail.com)
 
