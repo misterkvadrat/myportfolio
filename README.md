@@ -1,6 +1,6 @@
 # The Portfolio
-# Hi, I'm Maxim 👋
-## 17 y.o. | Python/Go learner | Case-championship semifinalist
+# Hi, I'm Maxim 'Pişmaniye' Pisman 👋
+## 17 y.o. | Python/Go learner | Business Case-championship Finalist
 
 ### 🎓 Currently studying
 - Python Programming (MOOC.fi)
