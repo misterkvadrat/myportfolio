@@ -8,7 +8,7 @@
 - Digital School (School by MSPU), Moscow
 
 ### 🏆 Achievements
-- **DEADLINE** (CU): Semifinalist
+- **DEADLINE** (CU): Finalist
 - **PROD** (CU): Semifinalist, iOS Mobile Stack
 
 ### 💻 Projects
