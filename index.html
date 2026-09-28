@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="Грей — цифровые подписки, сервисы, игровые пополнения и подарочные карты. Актуальные цены — в Telegram.">
+  <title>Грей — цифровые штуки</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f5f4f0;
+      --ink: #22211f;
+      --muted: #6d6963;
+      --orange: #b65d2e;
+      --card: #ebe9e3;
+      --border: #d9d6cf;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Arial, "Helvetica Neue", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+    .shell { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    .topbar { height: 72px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; text-decoration: none; font-weight: 800; letter-spacing: .09em; }
+    .brand-mark { width: 25px; height: 25px; border-radius: 50%; display: grid; place-items: center; background: var(--orange); color: white; font: italic 17px var(--serif); letter-spacing: 0; }
+    .topnav { display: flex; align-items: center; gap: 25px; }
+    .topnav a { text-decoration: none; font-size: 14px; color: var(--muted); }
+    .topnav a:hover { color: var(--ink); }
+    .top-cta { background: var(--orange); color: #fff !important; padding: 10px 14px; border-radius: 5px; font-weight: 700; }
+
+    .hero { min-height: 475px; position: relative; display: grid; place-items: center; padding: 62px 0 58px; text-align: center; }
+    .hero-content { max-width: 750px; position: relative; z-index: 1; }
+    .eyebrow { margin: 0 0 16px; font-size: 12px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); }
+    h1 { margin: 0; font: 400 clamp(54px, 8.1vw, 94px)/.94 var(--serif); letter-spacing: -.06em; }
+    h1 em { color: var(--orange); font-weight: 400; }
+    .hero-copy { max-width: 515px; margin: 22px auto 22px; color: #625e58; font: italic 17px/1.55 var(--serif); }
+    .hero-button { display: inline-flex; align-items: center; gap: 18px; padding: 14px 18px; border-radius: 5px; background: var(--orange); color: #fff; text-decoration: none; font-size: 14px; font-weight: 700; box-shadow: 0 4px 0 rgba(125,66,29,.13); transition: transform .18s ease, box-shadow .18s ease; }
+    .hero-button:hover { transform: translateY(-2px); box-shadow: 0 6px 0 rgba(125,66,29,.13); }
+    .terms { margin: 13px 0 0; color: var(--muted); font-size: 12px; }
+    .float-note { position: absolute; width: 166px; min-height: 116px; display: flex; flex-direction: column; justify-content: space-between; padding: 15px; background: #fffefa; border: 1px solid #e4e0d8; box-shadow: 0 10px 23px rgba(44,38,27,.09); text-align: left; }
+    .float-note strong { font: 400 24px/1 var(--serif); letter-spacing: -.04em; }
+    .float-note span { color: var(--muted); font-size: 12px; line-height: 1.35; }
+    .note-uni { left: 4%; top: 66px; transform: rotate(-5deg); }
+    .note-elo { right: 4%; top: 71px; transform: rotate(4deg); }
+    .note-bot { left: 9%; bottom: 43px; transform: rotate(3deg); }
+    .note-final { right: 8%; bottom: 48px; transform: rotate(-4deg); }
+    .note-bot strong { font-size: 22px; }
+    .hero-rule { height: 1px; background: var(--border); display: flex; align-items: center; justify-content: center; }
+    .hero-rule span { padding: 0 12px; background: var(--paper); color: var(--muted); font-size: 10px; letter-spacing: .11em; text-transform: uppercase; }
+
+    .offers { padding: 60px 0 78px; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 20px; }
+    .section-head h2, .about h2 { margin: 0; font: 400 clamp(34px, 5vw, 47px)/1 var(--serif); letter-spacing: -.05em; }
+    .section-head p { margin: 0 0 3px; color: var(--muted); font-size: 14px; }
+    .offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; }
+    .offer-card { min-height: 212px; padding: 18px 18px 17px; background: var(--card); border: 1px solid var(--border); border-radius: 5px; transition: transform .18s ease, box-shadow .18s ease; }
+    .offer-card:hover { transform: translateY(-3px); box-shadow: 0 9px 19px rgba(44,38,27,.07); }
+    .card-heading { display: flex; justify-content: space-between; align-items: start; gap: 10px; padding-bottom: 13px; border-bottom: 1px solid var(--border); }
+    .card-heading h3 { margin: 0; font-size: 15px; line-height: 1.25; }
+    .card-icon { display: grid; place-items: center; width: 25px; height: 25px; flex: 0 0 auto; color: var(--orange); background: rgba(215,124,63,.1); border-radius: 4px; font-size: 15px; }
+    .offer-card ul { list-style: none; padding: 12px 0 0; margin: 0; }
+    .offer-card li { position: relative; padding-left: 13px; margin: 0 0 7px; color: #595650; font-size: 14px; line-height: 1.4; }
+    .offer-card li::before { content: ""; position: absolute; left: 0; top: .52em; width: 4px; height: 4px; border-radius: 50%; background: var(--orange); }
+    .gift-cards { margin-top: 13px; padding: 17px 18px; display: grid; grid-template-columns: 150px 1fr; gap: 15px; align-items: start; background: #eae7e0; border: 1px solid var(--border); border-radius: 5px; }
+    .gift-cards h3 { margin: 2px 0 0; font-size: 14px; }
+    .gift-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .gift-list span { padding: 6px 9px; border: 1px solid #d6d1c8; border-radius: 4px; background: rgba(255,255,255,.34); color: #5c5852; font-size: 12px; }
+    .price-note { margin: 17px 0 0; padding: 17px 19px; background: #f0e1d3; border-left: 3px solid var(--orange); color: #534238; font: italic 15px/1.45 var(--serif); }
+    .price-note strong { font-style: normal; color: var(--ink); }
+
+    .about { border-top: 1px solid var(--border); padding: 52px 0 45px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; }
+    .about-label { margin: 6px 0; color: var(--muted); font-size: 11px; letter-spacing: .12em; font-weight: 700; text-transform: uppercase; }
+    .about-content p { margin: 0; max-width: 690px; color: #5e5a55; font-size: 14px; line-height: 1.65; }
+    .project-note { display: flex; justify-content: space-between; align-items: start; gap: 24px; margin-top: 22px; padding: 16px 0 0; border-top: 1px solid var(--border); }
+    .project-note b { font-size: 13px; }
+    .project-note span { display: block; max-width: 520px; margin-top: 4px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+    .beta { white-space: nowrap; padding: 5px 7px; background: #e7e3dc; border-radius: 3px; color: #6a655e; font-size: 12px; }
+    footer { min-height: 62px; display: flex; justify-content: space-between; gap: 15px; align-items: center; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; }
+    footer .footer-terms { color: var(--ink); }
+    footer a { text-decoration: none; }
+
+    @media (max-width: 900px) {
+      .hero { min-height: 430px; }
+      .float-note { width: 138px; min-height: 100px; padding: 12px; }
+      .float-note strong { font-size: 20px; }
+      .note-uni { left: 0; top: 26px; }
+      .note-elo { right: 0; top: 30px; }
+      .note-bot { left: 2%; bottom: 19px; }
+      .note-final { right: 2%; bottom: 21px; }
+      .offer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .shell { width: min(100% - 32px, 450px); }
+      .topbar { height: 62px; }
+      .brand { font-size: 11px; gap: 7px; letter-spacing: .06em; }
+      .brand-mark { width: 22px; height: 22px; }
+      .topnav { gap: 11px; }
+      .topnav a { font-size: 13px; }
+      .topnav a:first-child { display: none; }
+      .top-cta { padding: 9px 10px; }
+      .hero { min-height: auto; padding: 72px 0 54px; }
+      .hero-content { padding: 13px 0 18px; }
+      .eyebrow { font-size: 12px; }
+      h1 { font-size: clamp(48px, 14vw, 72px); }
+      .hero-copy { max-width: 355px; margin: 17px auto; font-size: 15px; }
+      .float-note { position: static; width: auto; min-height: 0; padding: 10px 12px; box-shadow: 0 5px 13px rgba(44,38,27,.07); }
+      .float-note strong { font-size: 15px; }
+      .float-note span { font-size: 12px; }
+      .note-uni, .note-elo, .note-bot, .note-final { transform: none; }
+      .hero-content { grid-row: 1; }
+      .note-uni { grid-column: 1; grid-row: 2; }
+      .note-elo { grid-column: 2; grid-row: 2; }
+      .note-bot { grid-column: 1; grid-row: 3; }
+      .note-final { grid-column: 2; grid-row: 3; }
+      .hero { grid-template-columns: 1fr 1fr; column-gap: 8px; row-gap: 8px; }
+      .hero-content { grid-column: 1 / -1; }
+      .note-uni, .note-bot { text-align: left; }
+      .note-elo, .note-final { text-align: left; }
+      .hero-rule span { font-size: 9px; }
+      .offers { padding: 45px 0 54px; }
+      .section-head { align-items: start; flex-direction: column; gap: 9px; margin-bottom: 16px; }
+      .offer-grid { grid-template-columns: 1fr; gap: 9px; }
+      .offer-card { min-height: 0; padding: 15px; }
+      .offer-card ul { display: grid; grid-template-columns: 1fr 1fr; column-gap: 12px; }
+      .offer-card li { font-size: 14px; }
+      .gift-cards { grid-template-columns: 1fr; gap: 12px; padding: 15px; }
+      .gift-list { gap: 5px; }
+      .gift-list span { font-size: 12px; padding: 5px 7px; }
+      .price-note { font-size: 14px; }
+      .about { padding: 42px 0 35px; }
+      .about-grid { grid-template-columns: 1fr; gap: 17px; }
+      .project-note { gap: 10px; }
+      .project-note span { font-size: 13px; }
+      footer { font-size: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header class="shell topbar">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">Г</span>МАКСИМ / ГРЕЙ / БЕСЦВЕТНЫЙ</a>
+    <nav class="topnav" aria-label="Основная навигация">
+      <a href="#offers">Что есть</a>
+      <a href="#about">Обо мне</a>
+      <a class="top-cta" href="https://t.me/whothefckisthatguy" target="_blank" rel="noopener noreferrer">Написать ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="shell hero" aria-labelledby="hero-title">
+      <div class="float-note note-uni"><strong>РУТ МИИТ</strong><span>09.03.01<br>Технологии разработки ПО</span></div>
+      <div class="float-note note-elo"><strong>1464 Elo</strong><span>Шахматы · играю головой</span></div>
+      <div class="float-note note-bot"><strong>prsrUltima</strong><span>Свой Telegram-проект</span></div>
+      <div class="float-note note-final"><strong>DDLN</strong><span>Участник финала</span></div>
+      <div class="hero-content">
+        <p class="eyebrow">Максим · Грей · цифровая барахолка</p>
+        <h1 id="hero-title">Подписки,<br>сервисы <em>и другое.</em></h1>
+        <p class="hero-copy">Нейросети, игровые пополнения, Telegram и подарочные карты. Спрашивай, что нужно — подскажу по наличию и цене.</p>
+        <a class="hero-button" href="https://t.me/whothefckisthatguy" target="_blank" rel="noopener noreferrer">Узнать цену в Telegram <span aria-hidden="true">↗</span></a>
+        <p class="terms">Цены — в личке · работаю только по предоплате</p>
+      </div>
+    </section>
+    <div class="shell hero-rule"><span>Что можно найти</span></div>
+
+    <section class="shell offers" id="offers" aria-labelledby="offers-title">
+      <div class="section-head">
+        <h2 id="offers-title">В продаже</h2>
+        <p>Если не нашёл нужное — напиши, уточню.</p>
+      </div>
+      <div class="offer-grid">
+        <article class="offer-card">
+          <div class="card-heading"><h3>Подписки и нейросети</h3><span class="card-icon" aria-hidden="true">✳</span></div>
+          <ul>
+            <li>ChatGPT · все уровни и API</li><li>Claude · все уровни и API</li><li>Grok · все уровни и API</li><li>Gemini</li><li>Perplexity</li>
+          </ul>
+        </article>
+        <article class="offer-card">
+          <div class="card-heading"><h3>Сервисы</h3><span class="card-icon" aria-hidden="true">◈</span></div>
+          <ul><li>Figma</li><li>Notion</li><li>Adobe</li></ul>
+        </article>
+        <article class="offer-card">
+          <div class="card-heading"><h3>Игры и донаты</h3><span class="card-icon" aria-hidden="true">⌘</span></div>
+          <ul>
+            <li>Голда в CS</li><li>Робуксы и предметы в Roblox</li><li>Brawl Stars · Clash Royale</li><li>В-баксы в Fortnite</li><li>EA FC 2027 · Ultimate / Standard</li>
+          </ul>
+        </article>
+        <article class="offer-card">
+          <div class="card-heading"><h3>Telegram</h3><span class="card-icon" aria-hidden="true">✉</span></div>
+          <ul><li>Звёзды и подарки</li><li>Premium дешевле официальной цены</li><li>Аккаунты Telegram</li></ul>
+        </article>
+        <article class="offer-card">
+          <div class="card-heading"><h3>Подарочные карты</h3><span class="card-icon" aria-hidden="true">▧</span></div>
+          <ul><li>Xbox · Apple Store · Google Play</li><li>PlayStation · Roblox · Netflix</li><li>PUBG · LoL · Valorant · Discord</li><li>ExitLag · Minecraft · MLBB</li><li>Standoff 2</li></ul>
+        </article>
+      </div>
+      <p class="price-note"><strong>По цене:</strong> где-то официальная, где-то ниже, иногда — невероятно дёшево. Актуальную стоимость сориентирую в личных сообщениях.</p>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="shell about-grid">
+        <p class="about-label">Немного обо мне</p>
+        <div class="about-content">
+          <h2 id="about-title">Учусь и делаю своё.</h2>
+          <p>Максим, псевдоним Грей (Бесцветный). Учусь в РУТ МИИТ на направлении 09.03.01 «Технологии разработки ПО», играю в шахматы. Был участником финала DDLN.</p>
+          <div class="project-note">
+            <div><b>prsrUltima</b><span>Мой кроссплатформенный Telegram-бот для мониторинга баланса, курсов и предложений. Версия 0.3.0-beta; внешние подключения ещё проверяются.</span></div>
+            <span class="beta">МОЙ ПРОЕКТ</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell"><span>© 2026 Максим / Грей / Бесцветный</span><span class="footer-terms">Цены в личке · только предоплата</span><a href="https://t.me/whothefckisthatguy" target="_blank" rel="noopener noreferrer">@whothefckisthatguy ↗</a></footer>
+</body>
+</html>
